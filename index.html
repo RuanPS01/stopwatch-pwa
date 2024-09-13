@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css" />
+
+    <!-- Title -->
+    <title>Stopwatch</title>
+
+    <!-- Meta Tags required for
+	Progressive Web App -->
+    <meta name="apple-mobile-web-app-status-bar" content="#000">
+    <meta name="theme-color" content="black">
+
+    <!-- Manifest File link -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/icon-192x192.png" />
+
+    <script type="module" src="./app.js"></script>
+</head>
+
+<body>
+    <main class="centeredCollum">
+        <img id="sunrise" src="assets/sunrise.svg" style="width: 200px; height: 200px" />
+        <img id="storm" src="assets/storm.svg" style="width: 200px; height: 200px; display: none" />
+        <h1 style="text-align: center; margin-bottom: 4px;">Stopwatch</h1>
+        <p style="text-align: center; opacity: 0.5">Take your time</p>
+        <br>
+        <section class="centeredCollum">
+            <div style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    align-items: start;
+                    width:max-content;
+                    background-color: #0180c00c;
+                    border-radius: 10px;
+                    padding: 20px;
+                    align-items: center;
+                    border: 2px solid #0180c033">
+                <img id="clock" src="assets/clock.svg" style="
+                    width: 0px;
+                    height: 40px;
+                    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                " />
+                <h2 id="stopwatch" style="text-align: center; margin-bottom: 4px; margin-right: 18px;">00 : 00 : 00 : 00</h2>
+                <button id="play-pause" style="width: 100px;">Play</button>
+                <button id="reset" class="secondary" style="width: 100px;">Reset</button>
+            </div>
+        </section>
